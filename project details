@@ -1,0 +1,71 @@
+# 4-BIT RIPPLE CARRY ADDER
+
+## Project Title
+Design and Implementation of 4-Bit Ripple Carry Adder
+
+## Abstract
+This project explains the design and implementation of a 4-bit Ripple Carry Adder using digital logic circuits. A Ripple Carry Adder is a combinational logic circuit used to add binary numbers. It consists of multiple full adders connected in series, where the carry output from one stage is passed to the next stage. This project helps in understanding digital arithmetic circuits and binary addition.
+
+## Objective
+- To understand the working of Ripple Carry Adder.
+- To implement a 4-bit binary addition circuit.
+- To study carry propagation in digital circuits.
+- To analyze binary addition using logic gates.
+
+## Components Used
+### Hardware
+- Logic Gates
+- Full Adder Circuits
+- Power Supply
+
+### Software
+- Verilog HDL / VHDL
+- Xilinx Vivado / Quartus Prime
+
+## Working Principle
+A 4-bit Ripple Carry Adder is made up of four Full Adders connected together.
+
+### Working:
+1. Two 4-bit binary numbers are given as input.
+2. Each Full Adder adds corresponding bits.
+3. Carry generated from one Full Adder moves to the next Full Adder.
+4. Final output gives the Sum and Carry output.
+
+### Example:
+A = 1010  
+B = 0101  
+
+Output = 1111
+
+## Verilog Code
+
+```verilog
+module ripple_carry_adder(
+    input [3:0] A,
+    input [3:0] B,
+    input Cin,
+    output [3:0] Sum,
+    output Cout
+);
+
+assign {Cout, Sum} = A + B + Cin;
+
+endmodule
+```
+
+## Advantages
+- Simple circuit design
+- Easy implementation
+- Efficient binary addition
+
+## Applications
+- Arithmetic Logic Units (ALU)
+- Digital Computers
+- Processors
+- Embedded Systems
+
+## Result
+The 4-bit Ripple Carry Adder was successfully designed and tested for binary addition.
+
+## Conclusion
+This project helped in understanding binary arithmetic operations and carry propagation in digital systems.
